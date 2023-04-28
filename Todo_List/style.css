@@ -1,0 +1,12 @@
+:root{
+    --primary:rgb(200, 26, 84);
+    --business:rgb(14, 24, 114);
+    --personal:var(var(--primary));
+    --light:#EEE;
+    --dark:rgb(30, 2, 6);
+
+    --shadow:0px 1px 3px rgb(72, 68, 68);
+
+    --personal-glow:0px 0px 4px rgb(200, 26, 84);
+    --business-glow:0px 0px 4px rgb(14, 24, 114);
+}
