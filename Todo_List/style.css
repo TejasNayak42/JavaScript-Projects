@@ -3,10 +3,68 @@
     --business:rgb(14, 24, 114);
     --personal:var(var(--primary));
     --light:#EEE;
-    --dark:rgb(30, 2, 6);
+    --dark:#313154;
+    --grey:#888;
 
     --shadow:0px 1px 3px rgb(72, 68, 68);
 
     --personal-glow:0px 0px 4px rgb(200, 26, 84);
     --business-glow:0px 0px 4px rgb(14, 24, 114);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Carter',sans-serif;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),button {
+    appearance: none;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: initial;
+}
+
+body{
+    background : var(--light);
+    color: var(--dark);
+}
+
+section{
+    margin: 3rem 2rem;
+    padding: 1.5rem 1.5 rem;
+}
+
+h3{
+    color: var(--dark);
+    font-size: 1rem;
+    font-weight:400px ;
+    margin-bottom: 1rem;
+}
+
+h4{
+    color: var(--grey);
+    font-size: 0.75 rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.greeting .title{
+    display: flex;
+}
+
+.greeting .title input{
+    margin-left: 1rem;
+    flex: 1 1 0%;
+    min-width: 0;
+}
+
+.greeting .title,
+.greeting .title input {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+
 }
