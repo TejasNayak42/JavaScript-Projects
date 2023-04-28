@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Dancing+Script:wght@700&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+
+    <title>Todo List With Local Storage</title>
+</head>
+<body>
+    <main class="app">
+
+        <section class="greeting">
+            <h2 class="title">
+                Hey!<input type="text" id="name" placeholder="--Name here--">
+            </h2>
+        </section>
+
+        <section class="create-todo">
+            <h3 >CREATE TODO LIST</h3>
+            <form id="todo-form">
+                <h4>What's on your Todo List</h4>
+                <input 
+                    type="text" 
+                    name="content" 
+                    id="content" 
+                    placeholder="e.g:Buy milk">
+
+                <h4>Pick a Category</h4>
+                <div class="options">
+
+                    <label >
+                        <input 
+                            type="radio" 
+                            name="category"
+                            value="business"
+                            id="category1">
+                        <span class="business"></span>
+                        <div>Business</div>
+                    </label>
+
+                    <label >
+                        <input 
+                            type="radio" 
+                            name="category"
+                            value="personal"
+                            id="category2">
+                        <span class=" personal"></span>
+                        <div>Personal</div>
+                    </label>
+
+                </div>
+
+                <input type="submit"  value="Add">
+            </form>
+        </section>
+
+        <section class="todo-list">
+            <h3>ToDo List</h3>
+            <div class="list" id="todo-list">
+                <div class="todo-item">
+                    <label >
+                        <input type="checkbox">
+                        <span class="business"></span>
+                    </label>
+
+
+                    <div class="todo-content">
+                        <input type="text" value="Buy Milk" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+
+                <div class="todo-item">
+                    <label >
+                        <input type="checkbox">
+                        <span class="personal"></span>
+                    </label>
+
+
+                    <div class="todo-content">
+                        <input type="text" value="Return Home" readonly>
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="srcipt.js"></script>
+    
+</body>
+</html>
