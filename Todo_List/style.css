@@ -1,5 +1,5 @@
 :root{
-    --primary:rgb(200, 26, 84);
+    --primary:rgb(235, 147, 14);
     --business:rgb(14, 24, 114);
     --personal:var(var(--primary));
     --light:#EEE;
@@ -68,3 +68,42 @@ h4{
     font-weight: 700;
 
 }
+
+.create-todo input[type="text"]{
+    display:block;
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+    color: var(--dark);
+    background-color: #FFF;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.25em;
+}
+
+.create-todo .options{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.create-todo .options label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    display: none;
+}
+
+
+
