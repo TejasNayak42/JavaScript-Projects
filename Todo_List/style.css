@@ -168,7 +168,7 @@ input:checked~ .bubble::after {
 }
 
 .todo-list .list{
-    margin: 1rem;
+    margin: 0rem;
 }
 
 .todo-list .todo-item {
@@ -227,4 +227,33 @@ input:checked~ .bubble::after {
     text-decoration: line-through;
     color: var(--grey);
 }
+@media (max-width: 767px) {
+    .todo-item  label{
+        display: block;
+        margin-right: 1rem;
+        cursor: pointer;
+    }
+
+    .todo-item .todo-content input {
+        color: var(--dark);
+        font-size: 1rem;
+    }
+    
+   
+    
+    .todo-item .actions button {
+        display: block;
+        padding: 0.2rem;
+        border-radius: 0.25rem;
+        color: #fff;
+        cursor: pointer;
+        transition:0.2s ease-in-out ;
+    }
+    
+    .todo-item .actions button:hover {
+        opacity: 0.8;
+    }
+    
+   
+  }
 
