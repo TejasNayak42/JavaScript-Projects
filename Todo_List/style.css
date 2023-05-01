@@ -227,6 +227,7 @@ input:checked~ .bubble::after {
     text-decoration: line-through;
     color: var(--grey);
 }
+
 @media (max-width: 767px) {
     .todo-item  label{
         display: block;
@@ -236,14 +237,16 @@ input:checked~ .bubble::after {
 
     .todo-item .todo-content input {
         color: var(--dark);
-        font-size: 1rem;
+        font-size: 0.7rem;
     }
     
    
     
     .todo-item .actions button {
-        display: block;
-        padding: 0.2rem;
+        display: flex;
+        align-content: flex-end;
+        justify-content: space-between;
+        padding: 0rem;
         border-radius: 0.25rem;
         color: #fff;
         cursor: pointer;
@@ -254,6 +257,17 @@ input:checked~ .bubble::after {
         opacity: 0.8;
     }
     
+    .todo-item .actions .edit {
+        margin-right: 1.35rem;
+        background-color: var(--primary);
+    }
+    
+    .todo-item .actions .delete {
+        margin-right: 1.25rem;
+        padding: auto;
+        background-color: var(--danger);
+    }
    
   }
-
+  
+  
