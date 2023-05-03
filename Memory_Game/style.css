@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(325deg ,black 0%, pink 30%,maroon 70%,grey 100%);
+    font-family:Arial, Helvetica, sans-serif;
+    overflow:hidden;
+}
+
+.game{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.control{
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+button{
+    background: black;
+    color:aliceblue;
+    border-radius: 0.5rem;
+    padding: 0.8rem ,1.7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.disabled{
+ color:dimgray;
+}
+
+.stats{
+    color:#fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.board-game{
+    position: relative;
+}
+
+.board, .win{
+    border-radius: 0.4rem;
+    box-shadow: 0 1.6rem 4.2rem rgb(32, 29, 29);
+    background: linear-gradient(135deg ,black 0%, pink 30%,maroon 70%,grey 100%);
+    transition: transform .6s cubic-bezier(0.4,0,0.2,1);
+    backface-visibility: hidden;
+}
+
+.board{
+    padding: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap: 1.2rem;
+}
+
+.board-game.flipped .board{
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.board-game.flipped .win{
+    transform: rotateY(0) rotateZ(0);
+}
+
+.card{
+    position: relative;
+    width: 12.4rem;
+    height: 12.4rem;
+    cursor: pointer;
+}
+
+.card-front, .card-back{
+    position: absolute;
+    border-radius: 0.2rem;
+    width: 100%;
+    height: 100%;
+    background: #282a3a;
+    transition: transform .6s cubic-bezier(0.4,0,0.2,1);
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: rotateY(180deg) rotateZ(50deg);
+    font-size: 1.2rem;
+    user-select: none;
+    text-align: center;
+    line-height: 12.4rem;
+    background: #fdf8e6;
+}
+
+.card.flipped .card-front{
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.card.flipped .card-back{
+    transform: rotateY(0) rotateZ(0);
+}
+
+.win{
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #fdf8e6;
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+
+.highlight{
+    color:#61393f;
+}
